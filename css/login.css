@@ -1,0 +1,597 @@
+/* 头部 导航*/
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+}
+#nav{
+    margin:0px;
+}
+
+.banner-box{
+    min-height: 750px;
+    max-height: 1080px;
+    background: linear-gradient(to bottom, #f8fcff, #f8fcff, #f8fcff);
+    position: relative;
+}
+.banner-box .bg-box{
+    background:url(../images/login/banner.png) no-repeat center;
+    width: 100%;
+    height: 750px;
+    margin:0 auto;
+    background-color: #EDF9FB;
+}
+/* 登陆框*/
+#mainform{
+    width:372px;
+    position: absolute;
+    top: 17%;
+    right: 400px;
+    background-color: #FFF;
+    padding: 35px 35px 10px;
+    border-radius: 2px;
+}
+#mainform a{
+    text-decoration:none;
+}
+#mainform .tab-title{
+    font-size: 18px;
+    margin-top: 35px;
+    width:300px;
+    text-align: center;
+}
+#mainform .tab-title .active,#mainform .tab-title a:hover{
+    color:#000;
+}
+#mainform .tab-title a{
+    color: #7f7f7f;
+}
+/* 账号整体样式*/
+
+.tab-title span{
+    color: #B3ABAB;
+    display: inline-block;
+    border: 2px solid #B3ABAB;
+    border-left: 1px;
+    height: 10px;
+    line-height: 20px;
+    margin-right: 32px;
+    margin-left: 32px;
+}
+#mainform .tip-box{
+    position: relative;
+    height: 33px;
+    display: table;
+    width: 100%;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    border: solid 1px #ffc2b3;
+    background: #ffd1ca;
+    border-radius: 2px;
+    visibility:hidden;
+}
+
+.tip-box .cuowu{
+    color: #666;
+    font-size: 12px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#mainform .fieldInput{
+    margin-bottom:20px;
+    width: 300px;
+    padding: 0px 4px;
+    height: 46px;
+    line-height: 22px;
+    font-size: 14px;
+    margin-bottom: 26px;
+    border: 1px solid #dadada;
+    outline: none;
+    color: #474747;
+    zoom: 1;
+}
+#mainform .fieldInput input{
+    vertical-align: middle;
+    font-size: 14px;
+    margin-bottom: 0;
+    width: 96%;
+    height: 44px;
+    margin-left:10px;
+    border:0px;
+    outline:none;
+}
+
+/* 记住密码 */
+#mainform .rememberField{
+    margin-bottom: 25px;
+    height: 24px;
+    line-height: 20px;
+}
+.rememberField .checkboxPic{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+}
+.check_unchk .icon{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background:url(../images/login/elements.png);
+    background-position: -0px -127px;
+    position: absolute;
+}
+.check_unchk .icon2{
+    background:url(../images/login/elements.png);
+    background-position: -31px -160px;
+    display: none;
+}
+
+.rememberField label{
+    margin-right: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #7f7f7f;
+    font-weight: 400;
+}
+/* 登录*/
+#mainform .fullBtnBlue{
+    width: 300px;
+    display: block;
+    height: 46px;
+    font-size: 14px;
+    line-height: 46px;
+    text-align: center;
+    margin-bottom: 10px;
+    outline: none;
+    cursor: pointer;
+    background-color: #32a5e7;
+    color: #fff;
+    border-radius: 4px;
+}
+#mainform .fullBtnBlue:hover{
+    background-color:#32b5e7;
+}
+
+/*注册 忘记密码*/
+#mainform .transferField{
+    margin-bottom: 5px;
+}
+.transferField .link{
+    color: #387aff;
+}
+.transferField .right{
+    float: right;
+}
+.transferField .left{
+    float: left;
+}
+.qr-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background: url(../images/login/phone.png) no-repeat center;
+    cursor: pointer;
+}
+
+
+
+
+/* 二维码 */
+.code{
+    width: 100%;
+    height: 400px;
+    top: 100px;
+    left: 0;
+    background-color: #FFF;
+    z-index: 500;
+    display: none;
+}
+.code .img-box{
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    margin-bottom: 0;
+}
+.code .tips{
+    text-align: left;
+    font-size: 16px;
+    color: #999;
+    margin-top:20px;
+}
+/* 手机验证码*/
+.auth{
+    display: none;
+}
+.auth .normalInput{
+    margin-bottom: 20px;
+    width: 300px;
+    position: relative;
+    padding: 0px 10px;
+    height: 46px;
+    line-height: 22px;
+    font-size: 14px;
+    border: 1px solid #dadada;
+    outline: none;
+    color: #474747;
+    zoom: 1;
+}
+.auth .tip-box .cuowu{
+    color: #666;
+    font-size: 12px;
+    display: table-cell;
+    vertical-align: middle;
+    width:91%;
+    padding:0 28px;
+}
+.auth .tip-box .err-ico2{
+    background: url(../images/login/close-ico.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+.auth .tip-box .cuowu .err-ico{
+    background: url(../images/login/error-ico.png);
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.normalInput .cycode{
+    padding-top:10px;
+}
+.cycode .cycodePhone{
+    display: inline-block;
+    width: 60px;
+    border-right: 1px solid #DDD;
+    cursor: pointer;
+}
+.cycodePhone input{
+    line-height: 22px;
+    width: 60%;
+    color: grey;
+    text-align: center;
+    cursor: pointer;
+    border:0px;
+    outline:none;
+}
+.cycode .ipt-ipone{
+    vertical-align: middle;
+    font-size: 14px;
+    width: 74%;
+    text-indent: 8px;
+    border:0px;
+    outline:none;
+}
+.cycodePhone .icon{
+    display: inline-block;
+    width: 14px;
+    height: 8px;
+    background: url(../images/login/arrow-down.png) no-repeat center;
+}
+.qr-btn2{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background: url(../images/login/pc.png) no-repeat center;
+    cursor: pointer;
+}
+/* 下拉手机号 */
+.cycode-container{
+    width: 101%;
+    height: 210px;
+    line-height: 30px;
+    background: #FFF;
+    border: 1px solid #E8E8E8;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left: -1px;
+    top: 45px;
+    z-index: 500;
+    color: #000;
+    display: none;
+}
+.container-fluid{
+    margin:0px !important;
+    padding:0px !important;
+}
+.cycode-container .container-fluid .head{
+    background: #F9F9F9;
+    padding-left:10px;
+}
+.cycode-container .container-fluid ul li{
+    padding: 0 10px;
+    clear: both;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+
+/* footer底部开始*/
+.footer{
+    height:300px;
+    width:100%;
+    background:#fff;
+}
+.footer #ul{
+    margin-top:60px;
+}
+.footer #ul li{
+    text-align: center;
+    width: 16%;
+}
+.footer #ul li a{
+    line-height: 27px;
+    font-size: 12px;
+    color: #666;
+    text-decoration:none;
+
+}
+.footer #ul li a img{
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+}
+.footer #ul li a span{
+    width:25px;
+    line-height: 30px;
+    color: #999;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.footer #footer-top #ul-right .onlive-server{
+   text-align: right;
+    margin-top:50px;
+}
+.footer #footer-top #ul-right .onlive-server span{
+    color: #999;
+    font-size: 12px;
+    line-height: 30px;
+}
+.footer #footer-top #ul-right .onlive-server p.tel{
+    color: #00c3f5;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: -6px;
+    line-height: 40px;
+}
+.footer #footer-top #ul-right .onlive-server a{
+    height: 30px;
+    padding: 0 16px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 14px;
+    background: #0bbbef;
+    text-decoration:none;
+}
+
+.footer #footer-bottom #ul2 li{
+    padding-right: 15px;
+    border-right: 1px solid #d6d6d6;
+    float: left;
+    height: 18px;
+    margin-right: 15px;
+}
+.footer #footer-bottom #ul2 li a{
+    color:#999;
+    font-size:12px;
+
+}
+.footer #footer-bottom .meizu-footer-certificate{
+    margin-top: 35px;
+    color: #999;
+    font-size: 12px;
+}
+.footer #footer-bottom .meizu-footer-certificate a{
+    color:#999;
+    text-decoration:none;
+}
+.footer #footer-bottom .meizu-footer-certificate a:hover{
+    color: #31a5e7;
+}
+
+.footer #footer-bottom .ii-subscribe{
+    margin-top: 25px;
+    text-align:right;
+}
+.footer #footer-bottom .ii-subscribe a{
+    line-height: 27px;
+    font-size: 12px;
+    color:#999;
+}
+.footer #footer-bottom .ii-subscribe a img{
+    display: inline-block;
+    width: 21px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.footer #footer-bottom .ii-subscribe .ii-hr{
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background: #eee;
+    margin: 0 10px;
+}
+
+/*小于768的时候 footer的样式*/
+.xs-footer{
+    height:400px;
+}
+.xs-footer #ul3 li{
+    height:55px;
+}
+.xs-footer #ul3 li a{
+  text-decoration:none;
+  color:#999;
+}
+.xs-footer #ul3 li img{
+    width: 50px;
+    line-height:50px;
+}
+.xs-footer .tel{
+    color: #00c3f5;
+    font-size: 25px;
+    font-weight: 400;
+    text-align:center;
+}
+.xs-footer .tel .serive a{
+    height: 30px;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 14px;
+    background: #0bbbef;
+    text-decoration:none;
+}
+.xs-footer .tel .date{
+    color: #999;
+    font-size: 16px;
+    line-height: 30px;
+}
+.xs-footer .ii-subscribe{
+       margin-top: 25px;
+       text-align:center;
+}
+.xs-footer .ii-subscribe a{
+    line-height: 27px;
+    font-size: 12px;
+    color:#999;
+}
+.xs-footer .ii-subscribe a img{
+    display: inline-block;
+    width: 31px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.xs-footer .current-store{
+    text-align: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    font-style: 16px;
+    background-color: #fcfcfc;
+}
+.xs-footer .current-store .cn{
+    background-image: url(../images/guo.png);
+    background-position: 0 -63px;
+    width: 31px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    margin-top: -.2em;
+}
+
+
+.xs-footer .link{
+    color: #666;
+    margin-left: 0;
+    margin-bottom: 20px;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    float: none;
+    line-height: 30px;
+}
+.xs-footer .link #ul2 li a{
+    color:#999;
+    text-decoration:none;
+}
+.xs-footer .link #ul2 li a:hover{
+     color:#01BaF2;
+}
+
+.xs-footer .meizu-footer-certificate{
+    text-align:center;
+    color:#999;
+    height:70px;
+}
+.xs-footer .meizu-footer-certificate a{
+    color:#999;
+    text-decoration:none;
+}
+.xs-footer .meizu-footer-certificate a:hover{
+     color:#01BaF2;
+}
+
+
+/* 媒体查询 */
+
+
+@media (min-width:200px){
+#mainform{
+    right:50px;
+}
+
+}
+
+
+
+
+
+@media (min-width:992px){
+
+#mainform{
+    right:100px;
+}
+
+}
+
+
+
+@media (min-width:1310px){
+    #mainform{
+    right: 180px;
+}
+
+
+}
+
+@media (min-width:1610px){
+
+    #mainform{
+    right: 300px;
+}
+
+}
+
+@media (min-width:1780px){
+    #mainform{
+    right: 400px;
+}
+
+
+}

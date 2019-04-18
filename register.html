@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>注册页面</title>
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/register.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default" id="nav" role="navigation" style='background:transparent; border:0px;'>
+    <div class="container">
+      <div class="container-fluid">
+         <div class="navbar-header" id="header">
+                <a class="navbar-logo" href="#">
+         <svg fill="#1eb8EE" version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="110px" height="67" viewBox="17.318 5.824 402.048 73.556" enable-background="new 17.318 5.824 402.048 73.556" xml:space="preserve">
+                  <path d="M321.513,5.824H256.91v12.878h51.478l-49.294,44.581c-8.227,7.023-2.872,16.096,3.958,16.096h65.337V66.472
+                    h-52.117l48.964-44.554C333.52,14.473,328.535,5.824,321.513,5.824"></path>
+                  <rect x="226.517" y="5.824" width="14.426" height="73.556"></rect>
+                  <path d="M104.296,5.824h-71.36c-8.576,0-15.618,7.012-15.618,15.588v57.967H31.14V23.743
+                    c0-2.711,2.208-5.041,4.92-5.041h25.31v60.677h14.428V18.702h25.312c2.712,0,4.919,2.329,4.919,5.041v55.636h13.86V21.416
+                    C119.888,12.841,112.872,5.824,104.296,5.824"></path>
+                  <path d="M148.765,23.614c0-2.712,2.199-4.912,4.911-4.912h55.909V5.824h-58.236c-8.576,0-15.592,7.016-15.592,15.592
+                    v42.37c0,8.576,7.017,15.592,15.592,15.592h58.236V66.5h-55.909c-2.711,0-4.911-2.199-4.911-4.912V49.042h58.43V36.117h-58.43
+                    V23.614z"></path>
+                  <path d="M405.506,5.824v55.637c0,2.71-2.22,5.039-4.931,5.039h-39.77c-2.711,0-4.892-2.328-4.892-5.039V5.824h-13.86
+                    v57.963c0,8.576,7.018,15.592,15.592,15.592h46.127c8.575,0,15.592-7.017,15.592-15.592V5.824H405.506z"></path>
+    </svg></a>
+        </div>
+      </div>
+    </div>
+</nav>
+<!-- 导航 -->
+
+<!-- 整体背景 -->
+<div class="banner-box">
+     <div class="bg-box">
+         <form action="1.php" method="get" accept-charset="utf-8" id="mainform">
+            <!-- 选项卡切换 -->
+
+             <!-- 验证码 -->
+    <div class="auth">
+        <div class="tab-title hi">
+            <a href="#" class="linkABlue">注册 Flyme 账号</a>
+        </div>
+        <!-- 手机号错误提示 -->
+         <div class="tip-box" id="Phone">
+               <span class="cuowu"><i class="err-ico"></i>账号含非法字符，请输入合法账号或联系客服热线 400-788-3333 修改账号</span>
+               <i class="err-ico2"></i>
+        </div>
+        <!-- 验证码提示 -->
+        <div class="tip-box" id="yzm">
+               <span class="cuowu"><i class="err-ico"></i>
+                请输入6位数验证码
+               </span>
+               <i class="err-ico2"></i>
+        </div>
+        <div class="tip-box2">
+            <span >我们已发送一条验证码至+86
+              <span id="phoneNum">13954352456</span>
+              ，请输入短信中的验证码
+            </span>
+        </div>
+        <!-- 密码提示 -->
+        <div class="tip-box3" id="mima">密码长度为 8-16 位，至少包含字母、数字和符号中的两种类型，且不可与账号相同
+        </div>
+         <div class="tip-box4" id="pwd">
+               <span class="cuowu"><i class="err-ico"></i>
+                请输入8-16位密码
+               </span>
+               <i class="err-ico2"></i>
+        </div>
+
+        <!-- 手机号 -->
+        <div class="normalInput">
+           <div class="cycode">
+                <span class="cycodePhone">
+                    <input value="+86" name="shouji" readonly>
+                    <i class="icon"></i>
+                </span>
+                <input type="text" placeholder="手机号码" name="ipone" class="ipt-ipone"  maxlength="11">
+           </div>
+           <div class="cycode-container">
+               <div class="country-code">
+                   <div class="container-fluid">
+                       <div class="head">常用</div>
+                       <ul class="list-unstyled">
+                       <li data-code="+86" data-brief="CN"><span class="record-country">中国</span><span class="record-code">+86</span></li>
+                       <li data-code="+886" data-brief="TW"><span class="record-country">中国台湾</span><span class="record-code">+886</span></li>
+                       <li data-code="+852" data-brief="HK"><span class="record-country">中国香港</span><span class="record-code">+852</span></li>
+                       <li data-code="+55" data-brief="BR"><span class="record-country">Brazil</span><span class="record-code">+55</span></li>
+                       <li data-code="+91" data-brief="IN"><span class="record-country">India</span><span class="record-code">+91</span></li>
+                       <li data-code="+62" data-brief="ID"><span class="record-country">Indonesia</span><span class="record-code">+62</span></li>
+                       <li data-code="+60" data-brief="MY"><span class="record-country">Malaysia</span><span class="record-code">+60</span></li>
+                       </ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">A</div>
+                       <ul class="list-unstyled"><li data-code="+376" data-brief="AD"><span class="record-country">Andorra</span><span class="record-code">+376</span></li><li data-code="+93" data-brief="AF"><span class="record-country">Afghanistan</span><span class="record-code">+93</span></li><li data-code="+1" data-brief="AG"><span class="record-country">Antigua and Barbuda</span><span class="record-code">+1</span></li><li data-code="+1" data-brief="AI"><span class="record-country">Anguilla</span><span class="record-code">+1</span></li><li data-code="+355" data-brief="AL"><span class="record-country">Albania</span><span class="record-code">+355</span></li><li data-code="+374" data-brief="AM"><span class="record-country">Armenia</span><span class="record-code">+374</span></li><li data-code="+244" data-brief="AO"><span class="record-country">Angola</span><span class="record-code">+244</span></li><li data-code="+54" data-brief="AR"><span class="record-country">Argentina</span><span class="record-code">+54</span></li><li data-code="+1" data-brief="AS"><span class="record-country">American Samoa</span><span class="record-code">+1</span></li><li data-code="+43" data-brief="AT"><span class="record-country">Austria</span><span class="record-code">+43</span></li><li data-code="+61" data-brief="AU"><span class="record-country">Australia</span><span class="record-code">+61</span></li><li data-code="+297" data-brief="AW"><span class="record-country">Aruba</span><span class="record-code">+297</span></li><li data-code="+994" data-brief="AZ"><span class="record-country">Azerbaijan</span><span class="record-code">+994</span></li><li data-code="+213" data-brief="DZ"><span class="record-country">Algeria</span><span class="record-code">+213</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">B</div>
+                       <ul class="list-unstyled"><li data-code="+387" data-brief="BA"><span class="record-country">Bosnia and Herzegovina</span><span class="record-code">+387</span></li><li data-code="+1" data-brief="BB"><span class="record-country">Barbados</span><span class="record-code">+1</span></li><li data-code="+880" data-brief="BD"><span class="record-country">Bangladesh</span><span class="record-code">+880</span></li><li data-code="+32" data-brief="BE"><span class="record-country">Belgium</span><span class="record-code">+32</span></li><li data-code="+226" data-brief="BF"><span class="record-country">Burkina Faso</span><span class="record-code">+226</span></li><li data-code="+359" data-brief="BG"><span class="record-country">Bulgaria</span><span class="record-code">+359</span></li><li data-code="+973" data-brief="BH"><span class="record-country">Bahrain</span><span class="record-code">+973</span></li><li data-code="+257" data-brief="BI"><span class="record-country">Burundi</span><span class="record-code">+257</span></li><li data-code="+229" data-brief="BJ"><span class="record-country">Benin</span><span class="record-code">+229</span></li><li data-code="+1" data-brief="BM"><span class="record-country">Bermuda</span><span class="record-code">+1</span></li><li data-code="+673" data-brief="BN"><span class="record-country">Brunei</span><span class="record-code">+673</span></li><li data-code="+591" data-brief="BO"><span class="record-country">Bolivia</span><span class="record-code">+591</span></li><li data-code="+599" data-brief="BQ"><span class="record-country">Bonaire, Sint Eustatius and Saba</span><span class="record-code">+599</span></li><li data-code="+55" data-brief="BR"><span class="record-country">Brazil</span><span class="record-code">+55</span></li><li data-code="+1" data-brief="BS"><span class="record-country">Bahamas</span><span class="record-code">+1</span></li><li data-code="+975" data-brief="BT"><span class="record-country">Bhutan</span><span class="record-code">+975</span></li><li data-code="+267" data-brief="BW"><span class="record-country">Botswana</span><span class="record-code">+267</span></li><li data-code="+375" data-brief="BY"><span class="record-country">Belarus</span><span class="record-code">+375</span></li><li data-code="+501" data-brief="BZ"><span class="record-country">Belize</span><span class="record-code">+501</span></li><li data-code="+246" data-brief="IO"><span class="record-country">British Indian Ocean Territory</span><span class="record-code">+246</span></li><li data-code="+1" data-brief="VG"><span class="record-country">British Virgin Islands</span><span class="record-code">+1</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">C</div>
+                       <ul class="list-unstyled"><li data-code="+1" data-brief="CA"><span class="record-country">Canada</span><span class="record-code">+1</span></li><li data-code="+61" data-brief="CC"><span class="record-country">Cocos Islands</span><span class="record-code">+61</span></li><li data-code="+236" data-brief="CF"><span class="record-country">Central African Republic</span><span class="record-code">+236</span></li><li data-code="+242" data-brief="CG"><span class="record-country">Congo</span><span class="record-code">+242</span></li><li data-code="+225" data-brief="CI"><span class="record-country">Côte d'Ivoire</span><span class="record-code">+225</span></li><li data-code="+682" data-brief="CK"><span class="record-country">Cook Islands</span><span class="record-code">+682</span></li><li data-code="+56" data-brief="CL"><span class="record-country">Chile</span><span class="record-code">+56</span></li><li data-code="+237" data-brief="CM"><span class="record-country">Cameroon</span><span class="record-code">+237</span></li><li data-code="+86" data-brief="CN"><span class="record-country">China</span><span class="record-code">+86</span></li><li data-code="+57" data-brief="CO"><span class="record-country">Colombia</span><span class="record-code">+57</span></li><li data-code="+506" data-brief="CR"><span class="record-country">Costa Rica</span><span class="record-code">+506</span></li><li data-code="+53" data-brief="CU"><span class="record-country">Cuba</span><span class="record-code">+53</span></li><li data-code="+238" data-brief="CV"><span class="record-country">Cape Verde</span><span class="record-code">+238</span></li><li data-code="+599" data-brief="CW"><span class="record-country">Curaçao</span><span class="record-code">+599</span></li><li data-code="+61" data-brief="CX"><span class="record-country">Christmas Island</span><span class="record-code">+61</span></li><li data-code="+357" data-brief="CY"><span class="record-country">Cyprus</span><span class="record-code">+357</span></li><li data-code="+420" data-brief="CZ"><span class="record-country">Czech Republic</span><span class="record-code">+420</span></li><li data-code="+385" data-brief="HR"><span class="record-country">Croatia</span><span class="record-code">+385</span></li><li data-code="+855" data-brief="KH"><span class="record-country">Cambodia</span><span class="record-code">+855</span></li><li data-code="+269" data-brief="KM"><span class="record-country">Comoros</span><span class="record-code">+269</span></li><li data-code="+1" data-brief="KY"><span class="record-country">Cayman Islands</span><span class="record-code">+1</span></li><li data-code="+235" data-brief="TD"><span class="record-country">Chad</span><span class="record-code">+235</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">D</div>
+                       <ul class="list-unstyled"><li data-code="+253" data-brief="DJ"><span class="record-country">Djibouti</span><span class="record-code">+253</span></li><li data-code="+45" data-brief="DK"><span class="record-country">Denmark</span><span class="record-code">+45</span></li><li data-code="+1" data-brief="DM"><span class="record-country">Dominica</span><span class="record-code">+1</span></li><li data-code="+1" data-brief="DO"><span class="record-country">Dominican Republic</span><span class="record-code">+1</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">E</div>
+                       <ul class="list-unstyled"><li data-code="+593" data-brief="EC"><span class="record-country">Ecuador</span><span class="record-code">+593</span></li><li data-code="+372" data-brief="EE"><span class="record-country">Estonia</span><span class="record-code">+372</span></li><li data-code="+20" data-brief="EG"><span class="record-country">Egypt</span><span class="record-code">+20</span></li><li data-code="+291" data-brief="ER"><span class="record-country">Eritrea</span><span class="record-code">+291</span></li><li data-code="+251" data-brief="ET"><span class="record-country">Ethiopia</span><span class="record-code">+251</span></li><li data-code="+240" data-brief="GQ"><span class="record-country">Equatorial Guinea</span><span class="record-code">+240</span></li><li data-code="+503" data-brief="SV"><span class="record-country">El Salvador</span><span class="record-code">+503</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">F</div>
+                       <ul class="list-unstyled"><li data-code="+358" data-brief="FI"><span class="record-country">Finland</span><span class="record-code">+358</span></li><li data-code="+679" data-brief="FJ"><span class="record-country">Fiji</span><span class="record-code">+679</span></li><li data-code="+500" data-brief="FK"><span class="record-country">Falkland Islands</span><span class="record-code">+500</span></li><li data-code="+298" data-brief="FO"><span class="record-country">Faroe Islands</span><span class="record-code">+298</span></li><li data-code="+33" data-brief="FR"><span class="record-country">France</span><span class="record-code">+33</span></li><li data-code="+594" data-brief="GF"><span class="record-country">French Guiana</span><span class="record-code">+594</span></li><li data-code="+689" data-brief="PF"><span class="record-country">French Polynesia</span><span class="record-code">+689</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">G</div>
+                       <ul class="list-unstyled"><li data-code="+49" data-brief="DE"><span class="record-country">Germany</span><span class="record-code">+49</span></li><li data-code="+241" data-brief="GA"><span class="record-country">Gabon</span><span class="record-code">+241</span></li><li data-code="+1" data-brief="GD"><span class="record-country">Grenada</span><span class="record-code">+1</span></li><li data-code="+995" data-brief="GE"><span class="record-country">Georgia</span><span class="record-code">+995</span></li><li data-code="+44" data-brief="GG"><span class="record-country">Guernsey</span><span class="record-code">+44</span></li><li data-code="+233" data-brief="GH"><span class="record-country">Ghana</span><span class="record-code">+233</span></li><li data-code="+350" data-brief="GI"><span class="record-country">Gibraltar</span><span class="record-code">+350</span></li><li data-code="+299" data-brief="GL"><span class="record-country">Greenland</span><span class="record-code">+299</span></li><li data-code="+220" data-brief="GM"><span class="record-country">Gambia</span><span class="record-code">+220</span></li><li data-code="+224" data-brief="GN"><span class="record-country">Guinea</span><span class="record-code">+224</span></li><li data-code="+590" data-brief="GP"><span class="record-country">Guadeloupe</span><span class="record-code">+590</span></li><li data-code="+30" data-brief="GR"><span class="record-country">Greece</span><span class="record-code">+30</span></li><li data-code="+502" data-brief="GT"><span class="record-country">Guatemala</span><span class="record-code">+502</span></li><li data-code="+1" data-brief="GU"><span class="record-country">Guam</span><span class="record-code">+1</span></li><li data-code="+245" data-brief="GW"><span class="record-country">Guinea-Bissau</span><span class="record-code">+245</span></li><li data-code="+592" data-brief="GY"><span class="record-country">Guyana</span><span class="record-code">+592</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">H</div>
+                       <ul class="list-unstyled"><li data-code="+852" data-brief="HK"><span class="record-country">Hong Kong</span><span class="record-code">+852</span></li><li data-code="+504" data-brief="HN"><span class="record-country">Honduras</span><span class="record-code">+504</span></li><li data-code="+509" data-brief="HT"><span class="record-country">Haiti</span><span class="record-code">+509</span></li><li data-code="+36" data-brief="HU"><span class="record-country">Hungary</span><span class="record-code">+36</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">I</div>
+                       <ul class="list-unstyled"><li data-code="+62" data-brief="ID"><span class="record-country">Indonesia</span><span class="record-code">+62</span></li><li data-code="+353" data-brief="IE"><span class="record-country">Ireland</span><span class="record-code">+353</span></li><li data-code="+972" data-brief="IL"><span class="record-country">Israel</span><span class="record-code">+972</span></li><li data-code="+44" data-brief="IM"><span class="record-country">Isle Of Man</span><span class="record-code">+44</span></li><li data-code="+91" data-brief="IN"><span class="record-country">India</span><span class="record-code">+91</span></li><li data-code="+964" data-brief="IQ"><span class="record-country">Iraq</span><span class="record-code">+964</span></li><li data-code="+98" data-brief="IR"><span class="record-country">Iran</span><span class="record-code">+98</span></li><li data-code="+354" data-brief="IS"><span class="record-country">Iceland</span><span class="record-code">+354</span></li><li data-code="+39" data-brief="IT"><span class="record-country">Italy</span><span class="record-code">+39</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">J</div>
+                       <ul class="list-unstyled"><li data-code="+44" data-brief="JE"><span class="record-country">Jersey</span><span class="record-code">+44</span></li><li data-code="+1" data-brief="JM"><span class="record-country">Jamaica</span><span class="record-code">+1</span></li><li data-code="+962" data-brief="JO"><span class="record-country">Jordan</span><span class="record-code">+962</span></li><li data-code="+81" data-brief="JP"><span class="record-country">Japan</span><span class="record-code">+81</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">K</div>
+                       <ul class="list-unstyled"><li data-code="+254" data-brief="KE"><span class="record-country">Kenya</span><span class="record-code">+254</span></li><li data-code="+996" data-brief="KG"><span class="record-country">Kyrgyzstan</span><span class="record-code">+996</span></li><li data-code="+686" data-brief="KI"><span class="record-country">Kiribati</span><span class="record-code">+686</span></li><li data-code="+965" data-brief="KW"><span class="record-country">Kuwait</span><span class="record-code">+965</span></li><li data-code="+7" data-brief="KZ"><span class="record-country">Kazakhstan</span><span class="record-code">+7</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">L</div>
+                       <ul class="list-unstyled"><li data-code="+856" data-brief="LA"><span class="record-country">Laos</span><span class="record-code">+856</span></li><li data-code="+961" data-brief="LB"><span class="record-country">Lebanon</span><span class="record-code">+961</span></li><li data-code="+423" data-brief="LI"><span class="record-country">Liechtenstein</span><span class="record-code">+423</span></li><li data-code="+231" data-brief="LR"><span class="record-country">Liberia</span><span class="record-code">+231</span></li><li data-code="+266" data-brief="LS"><span class="record-country">Lesotho</span><span class="record-code">+266</span></li><li data-code="+370" data-brief="LT"><span class="record-country">Lithuania</span><span class="record-code">+370</span></li><li data-code="+352" data-brief="LU"><span class="record-country">Luxembourg</span><span class="record-code">+352</span></li><li data-code="+371" data-brief="LV"><span class="record-country">Latvia</span><span class="record-code">+371</span></li><li data-code="+218" data-brief="LY"><span class="record-country">Libya</span><span class="record-code">+218</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">M</div>
+                       <ul class="list-unstyled"><li data-code="+691" data-brief="FM"><span class="record-country">Micronesia</span><span class="record-code">+691</span></li><li data-code="+212" data-brief="MA"><span class="record-country">Morocco</span><span class="record-code">+212</span></li><li data-code="+377" data-brief="MC"><span class="record-country">Monaco</span><span class="record-code">+377</span></li><li data-code="+373" data-brief="MD"><span class="record-country">Moldova</span><span class="record-code">+373</span></li><li data-code="+382" data-brief="ME"><span class="record-country">Montenegro</span><span class="record-code">+382</span></li><li data-code="+261" data-brief="MG"><span class="record-country">Madagascar</span><span class="record-code">+261</span></li><li data-code="+692" data-brief="MH"><span class="record-country">Marshall Islands</span><span class="record-code">+692</span></li><li data-code="+389" data-brief="MK"><span class="record-country">Macedonia</span><span class="record-code">+389</span></li><li data-code="+223" data-brief="ML"><span class="record-country">Mali</span><span class="record-code">+223</span></li><li data-code="+95" data-brief="MM"><span class="record-country">Myanmar</span><span class="record-code">+95</span></li><li data-code="+976" data-brief="MN"><span class="record-country">Mongolia</span><span class="record-code">+976</span></li><li data-code="+853" data-brief="MO"><span class="record-country">Macao</span><span class="record-code">+853</span></li><li data-code="+596" data-brief="MQ"><span class="record-country">Martinique</span><span class="record-code">+596</span></li><li data-code="+222" data-brief="MR"><span class="record-country">Mauritania</span><span class="record-code">+222</span></li><li data-code="+1" data-brief="MS"><span class="record-country">Montserrat</span><span class="record-code">+1</span></li><li data-code="+356" data-brief="MT"><span class="record-country">Malta</span><span class="record-code">+356</span></li><li data-code="+230" data-brief="MU"><span class="record-country">Mauritius</span><span class="record-code">+230</span></li><li data-code="+960" data-brief="MV"><span class="record-country">Maldives</span><span class="record-code">+960</span></li><li data-code="+265" data-brief="MW"><span class="record-country">Malawi</span><span class="record-code">+265</span></li><li data-code="+52" data-brief="MX"><span class="record-country">Mexico</span><span class="record-code">+52</span></li><li data-code="+60" data-brief="MY"><span class="record-country">Malaysia</span><span class="record-code">+60</span></li><li data-code="+258" data-brief="MZ"><span class="record-country">Mozambique</span><span class="record-code">+258</span></li><li data-code="+262" data-brief="YT"><span class="record-country">Mayotte</span><span class="record-code">+262</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">N</div>
+                       <ul class="list-unstyled"><li data-code="+850" data-brief="KP"><span class="record-country">North Korea</span><span class="record-code">+850</span></li><li data-code="+1" data-brief="MP"><span class="record-country">Northern Mariana Islands</span><span class="record-code">+1</span></li><li data-code="+264" data-brief="NA"><span class="record-country">Namibia</span><span class="record-code">+264</span></li><li data-code="+687" data-brief="NC"><span class="record-country">New Caledonia</span><span class="record-code">+687</span></li><li data-code="+227" data-brief="NE"><span class="record-country">Niger</span><span class="record-code">+227</span></li><li data-code="+672" data-brief="NF"><span class="record-country">Norfolk Island</span><span class="record-code">+672</span></li><li data-code="+234" data-brief="NG"><span class="record-country">Nigeria</span><span class="record-code">+234</span></li><li data-code="+505" data-brief="NI"><span class="record-country">Nicaragua</span><span class="record-code">+505</span></li><li data-code="+31" data-brief="NL"><span class="record-country">Netherlands</span><span class="record-code">+31</span></li><li data-code="+47" data-brief="NO"><span class="record-country">Norway</span><span class="record-code">+47</span></li><li data-code="+977" data-brief="NP"><span class="record-country">Nepal</span><span class="record-code">+977</span></li><li data-code="+674" data-brief="NR"><span class="record-country">Nauru</span><span class="record-code">+674</span></li><li data-code="+683" data-brief="NU"><span class="record-country">Niue</span><span class="record-code">+683</span></li><li data-code="+64" data-brief="NZ"><span class="record-country">New Zealand</span><span class="record-code">+64</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">O</div>
+                       <ul class="list-unstyled"><li data-code="+968" data-brief="OM"><span class="record-country">Oman</span><span class="record-code">+968</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">P</div>
+                       <ul class="list-unstyled"><li data-code="+507" data-brief="PA"><span class="record-country">Panama</span><span class="record-code">+507</span></li><li data-code="+51" data-brief="PE"><span class="record-country">Peru</span><span class="record-code">+51</span></li><li data-code="+675" data-brief="PG"><span class="record-country">Papua New Guinea</span><span class="record-code">+675</span></li><li data-code="+63" data-brief="PH"><span class="record-country">Philippines</span><span class="record-code">+63</span></li><li data-code="+92" data-brief="PK"><span class="record-country">Pakistan</span><span class="record-code">+92</span></li><li data-code="+48" data-brief="PL"><span class="record-country">Poland</span><span class="record-code">+48</span></li><li data-code="+1" data-brief="PR"><span class="record-country">Puerto Rico</span><span class="record-code">+1</span></li><li data-code="+970" data-brief="PS"><span class="record-country">Palestine</span><span class="record-code">+970</span></li><li data-code="+351" data-brief="PT"><span class="record-country">Portugal</span><span class="record-code">+351</span></li><li data-code="+680" data-brief="PW"><span class="record-country">Palau</span><span class="record-code">+680</span></li><li data-code="+595" data-brief="PY"><span class="record-country">Paraguay</span><span class="record-code">+595</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">Q</div>
+                       <ul class="list-unstyled"><li data-code="+974" data-brief="QA"><span class="record-country">Qatar</span><span class="record-code">+974</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">R</div>
+                       <ul class="list-unstyled"><li data-code="+262" data-brief="RE"><span class="record-country">Reunion</span><span class="record-code">+262</span></li><li data-code="+40" data-brief="RO"><span class="record-country">Romania</span><span class="record-code">+40</span></li><li data-code="+7" data-brief="RU"><span class="record-country">Russia</span><span class="record-code">+7</span></li><li data-code="+250" data-brief="RW"><span class="record-country">Rwanda</span><span class="record-code">+250</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">S</div>
+                       <ul class="list-unstyled"><li data-code="+590" data-brief="BL"><span class="record-country">Saint Barthélemy</span><span class="record-code">+590</span></li><li data-code="+41" data-brief="CH"><span class="record-country">Switzerland</span><span class="record-code">+41</span></li><li data-code="+34" data-brief="ES"><span class="record-country">Spain</span><span class="record-code">+34</span></li><li data-code="+1" data-brief="KN"><span class="record-country">Saint Kitts And Nevis</span><span class="record-code">+1</span></li><li data-code="+82" data-brief="KR"><span class="record-country">South Korea</span><span class="record-code">+82</span></li><li data-code="+1" data-brief="LC"><span class="record-country">Saint Lucia</span><span class="record-code">+1</span></li><li data-code="+94" data-brief="LK"><span class="record-country">Sri Lanka</span><span class="record-code">+94</span></li><li data-code="+590" data-brief="MF"><span class="record-country">Saint Martin</span><span class="record-code">+590</span></li><li data-code="+508" data-brief="PM"><span class="record-country">Saint Pierre And Miquelon</span><span class="record-code">+508</span></li><li data-code="+381" data-brief="RS"><span class="record-country">Serbia</span><span class="record-code">+381</span></li><li data-code="+966" data-brief="SA"><span class="record-country">Saudi Arabia</span><span class="record-code">+966</span></li><li data-code="+677" data-brief="SB"><span class="record-country">Solomon Islands</span><span class="record-code">+677</span></li><li data-code="+248" data-brief="SC"><span class="record-country">Seychelles</span><span class="record-code">+248</span></li><li data-code="+249" data-brief="SD"><span class="record-country">Sudan</span><span class="record-code">+249</span></li><li data-code="+46" data-brief="SE"><span class="record-country">Sweden</span><span class="record-code">+46</span></li><li data-code="+65" data-brief="SG"><span class="record-country">Singapore</span><span class="record-code">+65</span></li><li data-code="+290" data-brief="SH"><span class="record-country">Saint Helena</span><span class="record-code">+290</span></li><li data-code="+386" data-brief="SI"><span class="record-country">Slovenia</span><span class="record-code">+386</span></li><li data-code="+47" data-brief="SJ"><span class="record-country">Svalbard And Jan Mayen</span><span class="record-code">+47</span></li><li data-code="+421" data-brief="SK"><span class="record-country">Slovakia</span><span class="record-code">+421</span></li><li data-code="+232" data-brief="SL"><span class="record-country">Sierra Leone</span><span class="record-code">+232</span></li><li data-code="+378" data-brief="SM"><span class="record-country">San Marino</span><span class="record-code">+378</span></li><li data-code="+221" data-brief="SN"><span class="record-country">Senegal</span><span class="record-code">+221</span></li><li data-code="+252" data-brief="SO"><span class="record-country">Somalia</span><span class="record-code">+252</span></li><li data-code="+597" data-brief="SR"><span class="record-country">Suriname</span><span class="record-code">+597</span></li><li data-code="+239" data-brief="ST"><span class="record-country">Sao Tome And Principe</span><span class="record-code">+239</span></li><li data-code="+1" data-brief="SX"><span class="record-country">Sint Maarten (Dutch part)</span><span class="record-code">+1</span></li><li data-code="+963" data-brief="SY"><span class="record-country">Syria</span><span class="record-code">+963</span></li><li data-code="+268" data-brief="SZ"><span class="record-country">Swaziland</span><span class="record-code">+268</span></li><li data-code="+1" data-brief="VC"><span class="record-country">Saint Vincent And The Grenadines</span><span class="record-code">+1</span></li><li data-code="+685" data-brief="WS"><span class="record-country">Samoa</span><span class="record-code">+685</span></li><li data-code="+27" data-brief="ZA"><span class="record-country">South Africa</span><span class="record-code">+27</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">T</div>
+                       <ul class="list-unstyled"><li data-code="+243" data-brief="CD"><span class="record-country">The Democratic Republic Of Congo</span><span class="record-code">+243</span></li><li data-code="+1" data-brief="TC"><span class="record-country">Turks And Caicos Islands</span><span class="record-code">+1</span></li><li data-code="+228" data-brief="TG"><span class="record-country">Togo</span><span class="record-code">+228</span></li><li data-code="+66" data-brief="TH"><span class="record-country">Thailand</span><span class="record-code">+66</span></li><li data-code="+992" data-brief="TJ"><span class="record-country">Tajikistan</span><span class="record-code">+992</span></li><li data-code="+690" data-brief="TK"><span class="record-country">Tokelau</span><span class="record-code">+690</span></li><li data-code="+670" data-brief="TL"><span class="record-country">Timor-Leste</span><span class="record-code">+670</span></li><li data-code="+993" data-brief="TM"><span class="record-country">Turkmenistan</span><span class="record-code">+993</span></li><li data-code="+216" data-brief="TN"><span class="record-country">Tunisia</span><span class="record-code">+216</span></li><li data-code="+676" data-brief="TO"><span class="record-country">Tonga</span><span class="record-code">+676</span></li><li data-code="+90" data-brief="TR"><span class="record-country">Turkey</span><span class="record-code">+90</span></li><li data-code="+1" data-brief="TT"><span class="record-country">Trinidad and Tobago</span><span class="record-code">+1</span></li><li data-code="+688" data-brief="TV"><span class="record-country">Tuvalu</span><span class="record-code">+688</span></li><li data-code="+886" data-brief="TW"><span class="record-country">Taiwan</span><span class="record-code">+886</span></li><li data-code="+255" data-brief="TZ"><span class="record-country">Tanzania</span><span class="record-code">+255</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">U</div>
+                       <ul class="list-unstyled"><li data-code="+971" data-brief="AE"><span class="record-country">United Arab Emirates</span><span class="record-code">+971</span></li><li data-code="+44" data-brief="GB"><span class="record-country">United Kingdom</span><span class="record-code">+44</span></li><li data-code="+380" data-brief="UA"><span class="record-country">Ukraine</span><span class="record-code">+380</span></li><li data-code="+256" data-brief="UG"><span class="record-country">Uganda</span><span class="record-code">+256</span></li><li data-code="+1" data-brief="US"><span class="record-country">United States</span><span class="record-code">+1</span></li><li data-code="+598" data-brief="UY"><span class="record-country">Uruguay</span><span class="record-code">+598</span></li><li data-code="+998" data-brief="UZ"><span class="record-country">Uzbekistan</span><span class="record-code">+998</span></li><li data-code="+1" data-brief="VI"><span class="record-country">U.S. Virgin Islands</span><span class="record-code">+1</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">V</div>
+                       <ul class="list-unstyled"><li data-code="+379" data-brief="VA"><span class="record-country">Vatican</span><span class="record-code">+379</span></li><li data-code="+58" data-brief="VE"><span class="record-country">Venezuela</span><span class="record-code">+58</span></li><li data-code="+84" data-brief="VN"><span class="record-country">Vietnam</span><span class="record-code">+84</span></li><li data-code="+678" data-brief="VU"><span class="record-country">Vanuatu</span><span class="record-code">+678</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">W</div>
+                       <ul class="list-unstyled"><li data-code="+212" data-brief="EH"><span class="record-country">Western Sahara</span><span class="record-code">+212</span></li><li data-code="+681" data-brief="WF"><span class="record-country">Wallis And Futuna</span><span class="record-code">+681</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">Y</div>
+                       <ul class="list-unstyled"><li data-code="+967" data-brief="YE"><span class="record-country">Yemen</span><span class="record-code">+967</span></li></ul>
+                   </div>
+                   <div class="container-fluid">
+                       <div class="head">Z</div>
+                       <ul class="list-unstyled"><li data-code="+260" data-brief="ZM"><span class="record-country">Zambia</span><span class="record-code">+260</span></li><li data-code="+263" data-brief="ZW"><span class="record-country">Zimbabwe</span><span class="record-code">+263</span></li></ul>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <!-- 验证码 -->
+        <div class="normalInput2">
+            <input type="text" placeholder="验证码" name="yz" class="ipt-ipone2"  maxlength="6">
+            <span class="form-line"></span>
+            <input type="text" readonly name="" class="linkABlue" id="getkey" value="获取验证码">
+        </div>
+
+        <!-- 密码开始  -->
+          <div class="normalInput3" id="psd">
+            <input type="password" placeholder="密码" name="password" class="ipt-ipone3">
+            <a id="pwdBtn" class="pwdBtnShow">
+              <i class="biyan icon"></i>
+              <i class="yan icon"></i>
+            </a>
+            <div class="level">
+                <i>安全程度:</i>
+                <span class="s1">低</span>
+                <span class="s2">中</span>
+                <span class="s3">高</span>
+            </div>
+          </div>
+
+
+
+
+  <!-- 协议 -->
+        <div class="rememberField">
+          <label class="pointer">点击下一步，即表示您同意并愿意遵守</label>
+          <a href="#" class="linkABlue">Flyme服务协议</a>
+          <label class="pointer">和</label>
+          <a href="#" class="linkABlue">法律声明</a>
+        </div>
+
+
+        <!-- 登录 -->
+         <a class="fullBtnBlue" id="next">下一步</a>
+         <a  class="fullBtnBlue" id="zhuce">注册</a>
+         <a class="fullBtnBlue" id="submit">提交</a>
+             <div class="transferField">
+                 <a href="login.html" class="link left">登录</a>
+             </div>
+        </div>
+    <!-- 验证码结束 -->
+
+
+
+
+         </form>
+
+
+     </div>
+</div>
+
+
+
+<div class="footer">
+     <div class="container hidden-xs">
+        <div class="row" id="footer-top">
+            <div class="col-sm-9 col-md-9" >
+               <ul class="list-unstyled list-inline" id="ul">
+                   <li><a href="#"><img src="images/footer1.png" alt=""><span>全场顺丰包邮</span></a></li>
+                   <li><a href="#"><img src="images/footer2.png" alt=""><span>100+ 城市次日送达</span></a></li>
+                   <li><a href="#"><img src="images/footer3.png" alt=""><span>7天无理由退货</span></a></li>
+                   <li><a href="#"><img src="images/footer4.png" alt=""><span>15天换货保障</span></a></li>
+                   <li><a href="#"><img src="images/footer5.png" alt=""><span>1年免费保修</span></a></li>
+                   <li><a href="#"><img src="images/footer6.png" alt=""><span>上门快修</span></a></li>
+               </ul>
+            </div>
+            <div class="col-sm-3 col-md-3" id="ul-right">
+               <div class="onlive-server">
+                    <span>周一至周日 7:30-24:00</span>
+                    <p class="tel">400-788-3333</p>
+                    <a href="#">在线客服</a>
+               </div>
+            </div>
+        </div>
+        <hr>
+    <div class="row" id="footer-bottom">
+           <div class="col-sm-10 col-md-10">
+               <ul class="list-inline" id="ul2">
+                   <li><a href="#">了解魅族</a></li>
+                   <li><a href="#">加入我们</a></li>
+                   <li><a href="#">联系我们</a></li>
+                   <li><a href="#">Flyme</a></li>
+                   <li><a href="#">魅族社区</a></li>
+                   <li><a href="#">天猫旗舰店</a></li>
+                   <li><a href="#">问题反馈</a></li>
+                   <li><a href="#">线上销售授权名单公示</a></li>
+                   <li><a href="#">出版物经营许可证</a></li>
+                   <li><a href="#">简体中文</a></li>
+               </ul>
+               <div class="meizu-footer-certificate">
+
+                    ©2019 Meizu Telecom Equipment Co., Ltd. All rights reserved.
+                    <a href="#">粤ICP备13003602号</a>
+                    <a href="#">合字B2-20170010 </a>
+                    <a href="#">营业执照</a>
+                    <a href="#">法律声明</a>
+                    <span>粤公网安备 44049102496009 号</span>
+
+               </div>
+           </div>
+           <div class="col-sm-2 col-md-2">
+                  <div class="ii-subscribe">
+                       <a href="#"><img src="images/icon1.png" alt=""></a>
+                       <span class="ii-hr"></span>
+                       <a href="#"><img src="images/icon2.png" alt=""></a>
+                       <span class="ii-hr"></span>
+                       <a href="#"><img src="images/icon3.png" alt=""></a>
+                       <span class="ii-hr"></span>
+                       <a href="#"><img src="images/icon4.png" alt=""></a>
+
+
+                  </div>
+           </div>
+    </div>
+</div>
+
+
+     <div class="xs-footer container visible-xs">
+          <ul class="list-group" id="ul3">
+            <li class="list-group-item"><a href="#"><img src="images/footer1.png" alt=""><span>全场顺丰包邮</span></a></li>
+            <li class="list-group-item"><a href="#"><img src="images/footer2.png" alt=""><span>100+ 城市次日送达</span></a></li>
+            <li class="list-group-item"><a href="#"><img src="images/footer3.png" alt=""><span>7天无理由退货</span></a></li>
+            <li class="list-group-item"><a href="#"><img src="images/footer4.png" alt=""><span>15天换货保障</span></a></li>
+            <li class="list-group-item"><a href="#"><img src="images/footer5.png" alt=""><span>1年免费保修</span></a></li>
+            <li class="list-group-item"><a href="#"><img src="images/footer6.png" alt=""><span>上门快修</span></a></li>
+         </ul>
+         <div class="tel">
+            <p>400-788-3333</p>
+            <p class="serive"><a href="#">在线客服</a></p>
+            <p class="date">周一至周日 7:30-24:00</p>
+         </div>
+          <div class="ii-subscribe">
+               <a href="#"><img src="images/icon1.png" alt=""></a>
+               <span class="ii-hr"></span>
+               <a href="#"><img src="images/icon2.png" alt=""></a>
+               <span class="ii-hr"></span>
+               <a href="#"><img src="images/icon3.png" alt=""></a>
+               <span class="ii-hr"></span>
+               <a href="#"><img src="images/icon4.png" alt=""></a>
+        </div>
+        <div class="current-store">
+               <i class="cn"></i>
+               中国( 简体中文/CNY )
+        </div>
+        <div class="link">
+           <ul class="list-inline" id="ul2">
+                   <li><a href="#">了解魅族</a></li>
+                   <li><a href="#">加入我们</a></li>
+                   <li><a href="#">联系我们</a></li>
+                   <li><a href="#">Flyme</a></li>
+                   <li><a href="#">魅族社区</a></li>
+                   <br>
+                   <li><a href="#">天猫旗舰店</a></li>
+                   <li><a href="#">问题反馈</a></li>
+                   <li><a href="#">线上销售授权名单公示</a></li>
+                   <li><a href="#">出版物经营许可证</a></li>
+            </ul>
+        </div>
+
+        <div class="meizu-footer-certificate">
+
+                    ©2019 Meizu Telecom Equipment Co., Ltd. All rights reserved.
+                    <br>
+                    <a href="#">粤ICP备13003602号</a>
+                    <a href="#">合字B2-20170010 </a>
+                    <a href="#">营业执照</a>
+                    <a href="#">法律声明</a>
+                    <span>粤公网安备 44049102496009 号</span>
+
+        </div>
+     </div>
+</div>
+</body>
+</html>
+

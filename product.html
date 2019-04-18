@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品详情</title>
+    <link rel="stylesheet" type="text/css" href="css/product.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/product.js"></script>
+</head>
+<body>
+<div id="nav">
+<nav class="navbar navbar-default" role="navigation" style='background:transparent;border:0px; margin:0px'>
+  <div class="container">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-logo" href="#">
+         <svg fill="#01B5ff" version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="131px" height="95" viewBox="17.318 5.824 402.048 73.556" enable-background="new 17.318 5.824 402.048 73.556" xml:space="preserve">
+                  <path d="M321.513,5.824H256.91v12.878h51.478l-49.294,44.581c-8.227,7.023-2.872,16.096,3.958,16.096h65.337V66.472
+                    h-52.117l48.964-44.554C333.52,14.473,328.535,5.824,321.513,5.824"></path>
+                  <rect x="226.517" y="5.824" width="14.426" height="73.556"></rect>
+                  <path d="M104.296,5.824h-71.36c-8.576,0-15.618,7.012-15.618,15.588v57.967H31.14V23.743
+                    c0-2.711,2.208-5.041,4.92-5.041h25.31v60.677h14.428V18.702h25.312c2.712,0,4.919,2.329,4.919,5.041v55.636h13.86V21.416
+                    C119.888,12.841,112.872,5.824,104.296,5.824"></path>
+                  <path d="M148.765,23.614c0-2.712,2.199-4.912,4.911-4.912h55.909V5.824h-58.236c-8.576,0-15.592,7.016-15.592,15.592
+                    v42.37c0,8.576,7.017,15.592,15.592,15.592h58.236V66.5h-55.909c-2.711,0-4.911-2.199-4.911-4.912V49.042h58.43V36.117h-58.43
+                    V23.614z"></path>
+                  <path d="M405.506,5.824v55.637c0,2.71-2.22,5.039-4.931,5.039h-39.77c-2.711,0-4.892-2.328-4.892-51.039V5.824h-13.86
+                    v57.963c0,8.576,7.018,15.592,15.592,15.592h46.127c8.575,0,15.592-7.017,15.592-15.592V5.824H405.506z"></path>
+    </svg></a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav navbar-right" id="minu">
+            <li class="seach"><input type="seach" placeholder="魅族 16th" name="">
+            <span class="glyphicon glyphicon-search"></span></li>
+            <li class="glyphicon glyphicon-user">
+                <ul class="list-unstyled" id="nav-user">
+                    <li><a href="#">立即登陆</a></li>
+                    <li><a href="#">立即注册</a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">M码通道</a></li>
+                </ul>
+            </li>
+            <li class="glyphicon glyphicon-shopping-cart" id="cart">
+                <em>0</em>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" id="hei">
+            <li ><a href="#">手机</a></li>
+            <li ><a href="#">声学</a></li>
+            <li ><a href="#">配件</a></li>
+            <li ><a href="#">生活</a></li>
+            <li ><a href="#">Flyme</a></li>
+            <li ><a href="#">服务</a></li>
+            <li ><a href="#">专卖店</a></li>
+            <li ><a href="#">社区</a></li>
+            <li ><a href="#">App下载</a></li>
+        </ul>
+    </div>
+    </div>
+  </div>
+</nav>
+</div>
+<!-- 导航 -->
+<hr>
+<!-- 商品详情 -->
+<div id="xiangqing">
+<section class="container">
+        <!-- 图片部分 -->
+    <div class="preview">
+         <div class="booth-img">
+            <a href="#" id="Booth"><img src="images/prodoct/shop1.jpg" alt=""></a>
+         </div>
+         <!-- 小图片 -->
+         <ul class="preview-thumb">
+             <li class="current" id=""><a href="javascript:viod"><img src="images/prodoct/shop1.jpg" alt="" class="img1"></a></li>
+             <li><a href="javascript:viod"><img src="images/prodoct/shop2.jpg" alt="" class="img2"></a></li>
+             <li><a href="javascript:viod"><img src="images/prodoct/shop3.jpg" alt="" class="img3"></a></li>
+             <li><a href="javascript:viod"><img src="images/prodoct/shop4.jpg" alt="" class="img4"></a></li>
+         </ul>
+         <div class="preview-action">
+            <a href="javascript:viod(0)">
+                <i class="icon glyphicon glyphicon-asterisk"></i>
+                收藏
+            </a>
+         </div>
+    </div>
+        <!-- 文字部分 -->
+    <div class="property">
+        <div class="property-hd">
+           <h1>魅族盒子 一键找回遥控器</h1>
+           <p class="info">海量内容 同享美妙</p>
+        </div>
+<!-- 新年特惠 -->
+        <div class="property-activity">
+            <span class="mod-name">新年特惠</span>
+            <span class="mod-countdown">剩 余 <i>7</i> 天 </span>
+        </div>
+<!-- 价格 -->
+        <div class="property-sell">
+            <div class="property-sell-price">
+                <div class="mod-price">
+                       <small>¥</small>
+                       <span class="price">199.00</span>
+                </div>
+                <div class="price-del">
+                     ¥ 399.00
+                </div>
+            </div>
+        </div>
+<!-- 支持发货 -->
+        <div class="property-service">
+            <dl class="property-service-item">
+                <dt class="vm-metatit">支<span></span>持</dt>
+                <dd class="mod-bd">
+                    <span><i class="glyphicon glyphicon-ok-circle"></i>顺丰发货</span>
+                    <span><i class="glyphicon glyphicon-ok-circle"></i>7天无理由退货</span>
+                </dd>
+            </dl>
+
+            <dl class="property-service-suda">
+                <dt class="vm-metatit">配送服务</dt>
+                <dd class="mod-site">
+                    <div class="site-selector">
+                        <div class="text">
+                            北京  北京市
+                            <i class="glyphicon glyphicon-chevron-down"></i>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+
+            <div class="property-service-provider">
+               <span class="provider-text">
+                    本商品由 魅族 负责发货并提供售后服务
+                <a href="javascript:viod(0)">
+                <span><i class="glyphicon glyphicon-user"></i>在线客服</span>
+                </a>
+                </span>
+
+            </div>
+        </div>
+    <!-- 颜色分类 -->
+    <div class="property-set">
+         <dl class="property-set-sale">
+             <dt class="vm-metatit">颜色分类</dt>
+             <dd>
+                 <a  class="vm-sale-img active" id="one">
+                     <img src="images/prodoct/bai.png" alt="">
+                     <span>白色</span>
+                 </a>
+                 <a lass="vm-sale-img" id="two">
+                     <img src="images/prodoct/hei.png" alt="">
+                     <span>黑色</span>
+                 </a>
+             </dd>
+         </dl>
+    </div>
+<!-- 数量 + 购买-->
+    <div class="property-buy">
+        <dl class="buy-quantity">
+            <dt class="vm-metatit">
+               数
+                <span></span>
+               量
+            </dt>
+            <dd>
+                <div class="mod-control">
+                   <a href="javascript:viod(0)" class="vm-minus">-</a>
+                   <input type="text" class="zhi" value="5">
+                   <a href="javascript:viod(0)" class="vm-plus">+</a>
+                </div>
+            </dd>
+        </dl>
+
+        <div class="property-buy-action">
+            <a href="javascript:viod(0)" class="btn btn-col">立即购买</a>
+            <a href="javascript:viod(0)" class="btn btn-bor">加入购物车</a>
+
+        </div>
+    </div>
+<!-- 数量 + 购买结束-->
+
+    </div>
+
+
+</section>
+</div>
+<!-- 商品介绍 -->
+<section class="container-fluid">
+<!-- 开头  -->
+   <div class="detail-tab">
+     <div class="container">
+       <ul class="list-inline title">
+           <li class="active"><a >商品详情</a></li>
+           <li><a >规格参数</a></li>
+           <li><a >常见问题</a></li>
+       </ul>
+     </div>
+   </div>
+<!-- 图片 -->
+    <div class="container detail-content">
+         <img src="images/prodoct/details1.png" alt="">
+         <img src="images/prodoct/details2.png" alt="">
+         <img src="images/prodoct/details3.png" alt="">
+    </div>
+
+<!-- 为您推荐 -->
+
+<!-- 为您推荐 -->
+<div class="container">
+<h2 class="mod-title">为您推荐</h2>
+<div class="recommend-slider">
+     <div class="flex-viewport">
+          <ul class="slider-wrap">
+              <li class="rs-item">
+                  <a href="#" class="rs-item-wrap">
+                      <div class="pic">
+                         <img src="images/category/tuijian1.jpg" alt="">
+                      </div>
+                      <div class="desc">
+                          <h4 class="vm-title">魅族 16th</h4>
+                          <p class="vm-price">
+                              <span>￥</span>
+                              <span class="price-text">2498</span>
+                          </p>
+                      </div>
+                  </a>
+              </li>
+              <li class="rs-item">
+                  <a href="#" class="rs-item-wrap">
+                      <div class="pic">
+                         <img src="images/category/tuijian2.jpg" alt="">
+                      </div>
+                      <div class="desc">
+                          <h4 class="vm-title">魅族 16th</h4>
+                          <p class="vm-price">
+                              <span>￥</span>
+                              <span class="price-text">2498</span>
+                          </p>
+                      </div>
+                  </a>
+              </li>
+              <li class="rs-item">
+                  <a href="#" class="rs-item-wrap">
+                      <div class="pic">
+                         <img src="images/category/tuijian3.jpg" alt="">
+                      </div>
+                      <div class="desc">
+                          <h4 class="vm-title">魅族 16th</h4>
+                          <p class="vm-price">
+                              <span>￥</span>
+                              <span class="price-text">2498</span>
+                          </p>
+                      </div>
+                  </a>
+              </li>
+              <li class="rs-item">
+                  <a href="#" class="rs-item-wrap">
+                      <div class="pic">
+                         <img src="images/category/tuijian4.jpg" alt="">
+                      </div>
+                      <div class="desc">
+                          <h4 class="vm-title">魅族 16th</h4>
+                          <p class="vm-price">
+                              <span>￥</span>
+                              <span class="price-text">2498</span>
+                          </p>
+                      </div>
+                  </a>
+              </li>
+              <li class="rs-item">
+                  <a href="#" class="rs-item-wrap">
+                      <div class="pic">
+                         <img src="images/category/tuijian5.jpg" alt="">
+                      </div>
+                      <div class="desc">
+                          <h4 class="vm-title">魅族 16th</h4>
+                          <p class="vm-price">
+                              <span>￥</span>
+                              <span class="price-text">2498</span>
+                          </p>
+                      </div>
+                  </a>
+              </li>
+              <li class="rs-item">
+                  <a href="#" class="rs-item-wrap">
+                      <div class="pic">
+                         <img src="images/category/tuijian6.jpg" alt="">
+                      </div>
+                      <div class="desc">
+                          <h4 class="vm-title">魅族 16th</h4>
+                          <p class="vm-price">
+                              <span>￥</span>
+                              <span class="price-text">2498</span>
+                          </p>
+                      </div>
+                  </a>
+              </li>
+              <li class="rs-item">
+                  <a href="#" class="rs-item-wrap">
+                      <div class="pic">
+                         <img src="images/category/tuijian7.jpg" alt="">
+                      </div>
+                      <div class="desc">
+                          <h4 class="vm-title">魅族 16th</h4>
+                          <p class="vm-price">
+                              <span>￥</span>
+                              <span class="price-text">2498</span>
+                          </p>
+                      </div>
+                  </a>
+              </li>
+              <li class="rs-item">
+                  <a href="#" class="rs-item-wrap">
+                      <div class="pic">
+                         <img src="images/category/tuijian8.jpg" alt="">
+                      </div>
+                      <div class="desc">
+                          <h4 class="vm-title">魅族 16th</h4>
+                          <p class="vm-price">
+                              <span>￥</span>
+                              <span class="price-text">2498</span>
+                          </p>
+                      </div>
+                  </a>
+              </li>
+              <li class="rs-item">
+                  <a href="#" class="rs-item-wrap">
+                      <div class="pic">
+                         <img src="images/category/tuijian9.jpg" alt="">
+                      </div>
+                      <div class="desc">
+                          <h4 class="vm-title">魅族 16th</h4>
+                          <p class="vm-price">
+                              <span>￥</span>
+                              <span class="price-text">2498</span>
+                          </p>
+                      </div>
+                  </a>
+              </li>
+              <li class="rs-item">
+                  <a href="#" class="rs-item-wrap">
+                      <div class="pic">
+                         <img src="images/category/tuijian10.jpg" alt="">
+                      </div>
+                      <div class="desc">
+                          <h4 class="vm-title">魅族 16th</h4>
+                          <p class="vm-price">
+                              <span>￥</span>
+                              <span class="price-text">2498</span>
+                          </p>
+                      </div>
+                  </a>
+              </li>
+              <li class="rs-item">
+                  <a href="#" class="rs-item-wrap">
+                      <div class="pic">
+                         <img src="images/category/tuijian11.jpg" alt="">
+                      </div>
+                      <div class="desc">
+                          <h4 class="vm-title">魅族 16th</h4>
+                          <p class="vm-price">
+                              <span>￥</span>
+                              <span class="price-text">2498</span>
+                          </p>
+                      </div>
+                  </a>
+              </li>
+              <li class="rs-item">
+                  <a href="#" class="rs-item-wrap">
+                      <div class="pic">
+                         <img src="images/category/tuijian12.jpg" alt="">
+                      </div>
+                      <div class="desc">
+                          <h4 class="vm-title">魅族 16th</h4>
+                          <p class="vm-price">
+                              <span>￥</span>
+                              <span class="price-text">2498</span>
+                          </p>
+                      </div>
+                  </a>
+              </li>
+          </ul>
+     </div>
+</div>
+<div class="control">
+
+<ol class="paging">
+    <li><a href="javascript:void(0)" class="flex-active" id="yao"></a></li>
+    <li><a href="javascript:void(0)" class="" id="er"></a></li>
+    <li><a href="javascript:void(0)" class="" id="san"></a></li>
+</ol>
+</div>
+
+</div>
+<!-- 为您推荐结束 -->
+</section>
+
+<!-- footer开始 -->
+
+
+
+<!-- footer开始 -->
+<div class="footer">
+     <div class="container hidden-xs">
+        <div class="row" id="footer-top">
+            <div class="col-sm-9 col-md-9" >
+               <ul class="list-unstyled list-inline" id="ul">
+                   <li><a href="#"><img src="images/footer1.png" alt=""><span>全场顺丰包邮</span></a></li>
+                   <li><a href="#"><img src="images/footer2.png" alt=""><span>100+ 城市次日送达</span></a></li>
+                   <li><a href="#"><img src="images/footer3.png" alt=""><span>7天无理由退货</span></a></li>
+                   <li><a href="#"><img src="images/footer4.png" alt=""><span>15天换货保障</span></a></li>
+                   <li><a href="#"><img src="images/footer5.png" alt=""><span>1年免费保修</span></a></li>
+                   <li><a href="#"><img src="images/footer6.png" alt=""><span>上门快修</span></a></li>
+               </ul>
+            </div>
+            <div class="col-sm-3 col-md-3" id="ul-right">
+               <div class="onlive-server">
+                    <span>周一至周日 7:30-24:00</span>
+                    <p class="tel">400-788-3333</p>
+                    <a href="#">在线客服</a>
+               </div>
+            </div>
+        </div>
+        <hr>
+    <div class="row" id="footer-bottom">
+           <div class="col-sm-10 col-md-10">
+               <ul class="list-inline" id="ul2">
+                   <li><a href="#">了解魅族</a></li>
+                   <li><a href="#">加入我们</a></li>
+                   <li><a href="#">联系我们</a></li>
+                   <li><a href="#">Flyme</a></li>
+                   <li><a href="#">魅族社区</a></li>
+                   <li><a href="#">天猫旗舰店</a></li>
+                   <li><a href="#">问题反馈</a></li>
+                   <li><a href="#">线上销售授权名单公示</a></li>
+                   <li><a href="#">出版物经营许可证</a></li>
+                   <li><a href="#">简体中文</a></li>
+               </ul>
+               <div class="meizu-footer-certificate">
+
+                    ©2019 Meizu Telecom Equipment Co., Ltd. All rights reserved.
+                    <a href="#">粤ICP备13003602号</a>
+                    <a href="#">合字B2-20170010 </a>
+                    <a href="#">营业执照</a>
+                    <a href="#">法律声明</a>
+                    <span>粤公网安备 44049102496009 号</span>
+
+               </div>
+           </div>
+           <div class="col-sm-2 col-md-2">
+                  <div class="ii-subscribe">
+                       <a href="#"><img src="images/icon1.png" alt=""></a>
+                       <span class="ii-hr"></span>
+                       <a href="#"><img src="images/icon2.png" alt=""></a>
+                       <span class="ii-hr"></span>
+                       <a href="#"><img src="images/icon3.png" alt=""></a>
+                       <span class="ii-hr"></span>
+                       <a href="#"><img src="images/icon4.png" alt=""></a>
+
+
+                  </div>
+           </div>
+    </div>
+</div>
+
+
+     <div class="xs-footer container visible-xs">
+          <ul class="list-group" id="ul3">
+            <li class="list-group-item"><a href="#"><img src="images/footer1.png" alt=""><span>全场顺丰包邮</span></a></li>
+            <li class="list-group-item"><a href="#"><img src="images/footer2.png" alt=""><span>100+ 城市次日送达</span></a></li>
+            <li class="list-group-item"><a href="#"><img src="images/footer3.png" alt=""><span>7天无理由退货</span></a></li>
+            <li class="list-group-item"><a href="#"><img src="images/footer4.png" alt=""><span>15天换货保障</span></a></li>
+            <li class="list-group-item"><a href="#"><img src="images/footer5.png" alt=""><span>1年免费保修</span></a></li>
+            <li class="list-group-item"><a href="#"><img src="images/footer6.png" alt=""><span>上门快修</span></a></li>
+         </ul>
+         <div class="tel">
+            <p>400-788-3333</p>
+            <p class="serive"><a href="#">在线客服</a></p>
+            <p class="date">周一至周日 7:30-24:00</p>
+         </div>
+          <div class="ii-subscribe">
+               <a href="#"><img src="images/icon1.png" alt=""></a>
+               <span class="ii-hr"></span>
+               <a href="#"><img src="images/icon2.png" alt=""></a>
+               <span class="ii-hr"></span>
+               <a href="#"><img src="images/icon3.png" alt=""></a>
+               <span class="ii-hr"></span>
+               <a href="#"><img src="images/icon4.png" alt=""></a>
+        </div>
+        <div class="current-store">
+               <i class="cn"></i>
+               中国( 简体中文/CNY )
+        </div>
+        <div class="link">
+           <ul class="list-inline" id="ul2">
+                   <li><a href="#">了解魅族</a></li>
+                   <li><a href="#">加入我们</a></li>
+                   <li><a href="#">联系我们</a></li>
+                   <li><a href="#">Flyme</a></li>
+                   <li><a href="#">魅族社区</a></li>
+                   <br>
+                   <li><a href="#">天猫旗舰店</a></li>
+                   <li><a href="#">问题反馈</a></li>
+                   <li><a href="#">线上销售授权名单公示</a></li>
+                   <li><a href="#">出版物经营许可证</a></li>
+            </ul>
+        </div>
+
+        <div class="meizu-footer-certificate">
+
+                    ©2019 Meizu Telecom Equipment Co., Ltd. All rights reserved.
+                    <br>
+                    <a href="#">粤ICP备13003602号</a>
+                    <a href="#">合字B2-20170010 </a>
+                    <a href="#">营业执照</a>
+                    <a href="#">法律声明</a>
+                    <span>粤公网安备 44049102496009 号</span>
+
+        </div>
+     </div>
+</div>
+
+</body>
+</html>
